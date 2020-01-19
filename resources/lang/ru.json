@@ -1,0 +1,11 @@
+{
+    "Name": "Имя",
+    "Laravel": "Лэравел",
+    "Register": "Регистрация",
+    "Login": "Войти",
+    "Forgot Your Password?": "Забыли свой пароль?",
+    "Remember Me": "Запомнить меня",
+    "E-Mail Address": "E-mail адресс",
+    "Password": "Пароль",
+    "Confirm Password": "Подтвердите Пароль"
+}
