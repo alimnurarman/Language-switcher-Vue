@@ -15,7 +15,7 @@
             <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"></path></svg>
         </button>
         <transition name="dropdown-fade dropdown-menu">
-            <ul v-if="isVisible" ref="dropdown" class="absolute normal-case font-normal xs:left-0 lg:right-0 bg-white shadow overflow-hidden rounded w-48 border mt-2 py-1 lg:z-20">
+            <ul v-if="isVisible" ref="dropdown" class="bg-white shadow mt-2 py-1 pl-2" style="list-style: none;">
                 <li>
                     <a
                         :href="linkEn"
