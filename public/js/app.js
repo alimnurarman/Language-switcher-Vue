@@ -2030,8 +2030,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['locale', 'link-en', 'link-ru'],
+  props: ['locale', 'link-en', 'link-ru', 'link-kz'],
   data: function data() {
     return {
       isVisible: false,
@@ -38295,8 +38309,8 @@ var render = function() {
               "ul",
               {
                 ref: "dropdown",
-                staticClass:
-                  "absolute normal-case font-normal xs:left-0 lg:right-0 bg-white shadow overflow-hidden rounded w-48 border mt-2 py-1 lg:z-20"
+                staticClass: "bg-white shadow mt-2 py-1 pl-2",
+                staticStyle: { "list-style": "none" }
               },
               [
                 _c("li", [
@@ -38402,6 +38416,130 @@ var render = function() {
                       }),
                       _vm._v(" "),
                       _c("span", { staticClass: "ml-2" }, [_vm._v("English")])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "mr-2",
+                      attrs: { href: _vm.linkKz },
+                      on: {
+                        keydown: [
+                          function($event) {
+                            if (
+                              !$event.type.indexOf("key") &&
+                              _vm._k(
+                                $event.keyCode,
+                                "tab",
+                                9,
+                                $event.key,
+                                "Tab"
+                              )
+                            ) {
+                              return null
+                            }
+                            if (!$event.shiftKey) {
+                              return null
+                            }
+                            return _vm.focusPrevious(false)
+                          },
+                          function($event) {
+                            if (
+                              !$event.type.indexOf("key") &&
+                              _vm._k($event.keyCode, "up", 38, $event.key, [
+                                "Up",
+                                "ArrowUp"
+                              ])
+                            ) {
+                              return null
+                            }
+                            if (
+                              $event.ctrlKey ||
+                              $event.shiftKey ||
+                              $event.altKey ||
+                              $event.metaKey
+                            ) {
+                              return null
+                            }
+                            $event.preventDefault()
+                            return _vm.focusPrevious(true)
+                          },
+                          function($event) {
+                            if (
+                              !$event.type.indexOf("key") &&
+                              _vm._k($event.keyCode, "down", 40, $event.key, [
+                                "Down",
+                                "ArrowDown"
+                              ])
+                            ) {
+                              return null
+                            }
+                            if (
+                              $event.ctrlKey ||
+                              $event.shiftKey ||
+                              $event.altKey ||
+                              $event.metaKey
+                            ) {
+                              return null
+                            }
+                            $event.preventDefault()
+                          },
+                          function($event) {
+                            if (
+                              !$event.type.indexOf("key") &&
+                              _vm._k(
+                                $event.keyCode,
+                                "tab",
+                                9,
+                                $event.key,
+                                "Tab"
+                              )
+                            ) {
+                              return null
+                            }
+                            if (
+                              $event.ctrlKey ||
+                              $event.shiftKey ||
+                              $event.altKey ||
+                              $event.metaKey
+                            ) {
+                              return null
+                            }
+                            return _vm.hideDropdown($event)
+                          },
+                          function($event) {
+                            if (
+                              !$event.type.indexOf("key") &&
+                              _vm._k($event.keyCode, "esc", 27, $event.key, [
+                                "Esc",
+                                "Escape"
+                              ])
+                            ) {
+                              return null
+                            }
+                            if (
+                              $event.ctrlKey ||
+                              $event.shiftKey ||
+                              $event.altKey ||
+                              $event.metaKey
+                            ) {
+                              return null
+                            }
+                            return _vm.hideDropdown($event)
+                          }
+                        ]
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "h-8 w-8",
+                        attrs: { src: "/flag_kz.png", alt: "Kazakhstan  flag" }
+                      }),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "ml-2" }, [_vm._v("Қазақша")])
                     ]
                   )
                 ]),
@@ -38525,7 +38663,7 @@ var render = function() {
                         attrs: { src: "/flag_ru.png", alt: "russian flag" }
                       }),
                       _vm._v(" "),
-                      _c("span", { staticClass: "ml-2" }, [_vm._v("Russian")])
+                      _c("span", { staticClass: "ml-2" }, [_vm._v("Русский")])
                     ]
                   )
                 ])

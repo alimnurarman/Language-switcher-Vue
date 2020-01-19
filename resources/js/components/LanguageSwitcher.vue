@@ -46,6 +46,20 @@
                 </li> -->
                 <li>
                     <a
+                        :href="linkKz"
+                        class="mr-2"
+                        @keydown.shift.tab="focusPrevious(false)"
+                        @keydown.up.exact.prevent="focusPrevious(true)"
+                        @keydown.down.exact.prevent=""
+                        @keydown.tab.exact="hideDropdown"
+                        @keydown.esc.exact="hideDropdown"
+                    >
+                        <img src="/flag_kz.png" alt="Kazakhstan  flag" class="h-8 w-8">
+                        <span class="ml-2">Қазақша</span>
+                    </a>
+                </li>
+                <li>
+                    <a
                         :href="linkRu"
                         class="mr-2"
                         @keydown.shift.tab="focusPrevious(false)"
@@ -55,7 +69,7 @@
                         @keydown.esc.exact="hideDropdown"
                     >
                         <img src="/flag_ru.png" alt="russian flag" class="h-8 w-8">
-                        <span class="ml-2">Russian</span>
+                        <span class="ml-2">Русский</span>
                     </a>
                 </li>
             </ul>
@@ -65,7 +79,7 @@
 
 <script>
     export default {
-        props:['locale', 'link-en', 'link-ru'],
+        props:['locale', 'link-en', 'link-ru', 'link-kz'],
         data() {
             return {
                 isVisible: false,

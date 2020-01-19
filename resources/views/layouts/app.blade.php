@@ -43,6 +43,9 @@
                                 <a href="{{ route(Route::currentRouteName(), 'ru') }}" class="nav-link">RU</a>
                             </li>
                             <li class="nav-item">
+                                <a href="{{ route(Route::currentRouteName(), 'kz') }}" class="nav-link">KZ</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login', app()->getLocale()) }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
@@ -55,6 +58,7 @@
                                 locale="{{ app()->getLocale() }}"
                                 link-en="{{ route(Route::currentRouteName(), 'en') }}"
                                 link-ru="{{ route(Route::currentRouteName(), 'ru') }}"
+                                link-kz="{{ route(Route::currentRouteName(), 'kz') }}"
                                 ></language-switcher>
                             </li>
                         @else
